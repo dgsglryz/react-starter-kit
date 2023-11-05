@@ -1,8 +1,15 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { SiteProvider, AuthProvider } from "./context";
+
+import Home from "./Home";
 
 function App() {
-  return <div className="App">test</div>;
+  return (
+    <SiteProvider>
+      <AuthProvider>
+        <Home />
+      </AuthProvider>
+    </SiteProvider>
+  );
 }
 
 export default App;
